@@ -1,0 +1,54 @@
+@jwt = "eyJhbGciOiJIUzI1NiJ9.eyJ1c2VyX2lkIjo0LCJleHAiOjE2NTUxNjIzODJ9.zbUJvw3U4s6WaD2hbYFMv2LNvyuhNMC5zvLEP6W5rgA"
+
+
+### Users create (signup)
+POST http://localhost:3000/users
+Content-Type: application/json
+
+{
+  "organisation_id": 4,
+  "name": "Tester",
+  "email_address": "test3@test.com",
+  "password": "password",
+  "password_confirmation": "password"
+}
+
+### Sessions create (login)
+POST http://localhost:3000/sessions
+Content-Type: application/json
+
+{
+  "email_address": "test@test.com",
+  "password": "password"
+}
+
+### Organisation Create
+POST http://localhost:3000/organisations
+Content-Type: application/json
+
+{
+  "name": "Vought",
+  "hourly_rate": 30
+}
+
+### Update Organisation
+PATCH http://localhost:3000/organisations/7
+Content-Type: application/json
+
+{
+  "name": "New Vought",
+  "hourly_rate": 40
+}
+
+### Organisations Show
+GET http://localhost:3000/organisations/4
+Content-Type: application/json
+
+### Users index
+GET http://localhost:3000/users
+Content-Type: application/json
+
+
+### Shifts index
+GET http://localhost:3000/shifts
+Content-Type: application/json
